@@ -28,4 +28,9 @@ describe('Thermostat', function(){
     expect(function(){ thermostat.down(); }).toThrowError('Minimum temperature is 10 degrees');
   });
 
+  it('has max temp 25 if power saving mode on', function(){
+    spyOn(thermostat, 'powerSavingMode').and.returnValue(true);
+    expect(thermostat.max_temp).toEqual(25);
+  });
+
 });
