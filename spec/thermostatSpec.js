@@ -29,8 +29,13 @@ describe('Thermostat', function(){
   });
 
   it('has max temp 25 if power saving mode on', function(){
-    spyOn(thermostat, 'powerSavingMode').and.returnValue(true);
-    expect(thermostat.max_temp).toEqual(25);
+    spyOn(thermostat, 'isSavingPower').and.returnValue(true);
+    expect(thermostat.maxTemp()).toEqual(25);
+  });
+
+  it('has max temp 32 if power saving mode off', function(){
+    spyOn(thermostat, 'isSavingPower').and.returnValue(false);
+    expect(thermostat.maxTemp()).toEqual(32);
   });
 
 });
