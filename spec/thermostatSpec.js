@@ -29,13 +29,22 @@ describe('Thermostat', function(){
   });
 
   it('has max temp 25 if power saving mode on', function(){
-    spyOn(thermostat, 'isSavingPower').and.returnValue(true);
+    thermostat.savingPowerOn();
     expect(thermostat.maxTemp()).toEqual(25);
   });
 
   it('has max temp 32 if power saving mode off', function(){
-    spyOn(thermostat, 'isSavingPower').and.returnValue(false);
+    thermostat.savingPowerOff();
     expect(thermostat.maxTemp()).toEqual(32);
+  });
+
+  it('defaults to power saving mode on', function(){
+    expect(thermostat.maxTemp()).toEqual(25);
+  });
+
+  it('resets temperature to 20', function(){
+    thermostat.reset();
+    expect(thermostat.temperature()).toEqual(20);
   });
 
 });
