@@ -11,5 +11,9 @@ describe('Thermostat', function(){
     expect(thermostat.temperature()).toEqual(20);
   });
 
+  it('raise temperature when up button is clicked', function(){
+    thermostat.up();
+    expect(thermostat.temperature()).toEqual(21);
+  });
 
 });
