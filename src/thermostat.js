@@ -45,3 +45,33 @@ Thermostat.prototype.savingPowerOff = function(){
 Thermostat.prototype.reset = function () {
   this._temperature = this.DEFAULT_TEMP;
 };
+
+Thermostat.prototype.displayUsage = function() {
+  if (this._temperature < 18) {
+    return "low-usage";
+  }
+  else if (this._temperature > this.MAX_LIMIT_PSM_ON) {
+    return "high-usage";
+  }
+  else {
+    return "medium-usage";
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
