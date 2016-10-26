@@ -47,4 +47,18 @@ describe('Thermostat', function(){
     expect(thermostat.temperature()).toEqual(20);
   });
 
+  it("display changes to low-usage when below 18 degrees", function() {
+    thermostat._temperature = 17;
+    expect(thermostat.displayUsage()).toBe("low-usage")
+  });
+
+  it("display changes to medium-usage when between 18 and 25 degrees", function() {
+    thermostat._temperature = 20;
+    expect(thermostat.displayUsage()).toBe("medium-usage")
+  });
+
+  it("display changes to high-usage when above 25 degrees", function() {
+    thermostat._temperature = 26;
+    expect(thermostat.displayUsage()).toBe("high-usage")
+  });
 });
