@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <head>
   <title>Thermostat</title>
-  <script src="src/thermostat.js"></script>
+  <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
+  <script src="js/thermostat.js"></script>
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/interface.js"></script>
+
 </head>
 <body>
 
   <h1> Thermostat </h1>
-
   <section>
-    <h2> Temperature: <span id="temperature"></span> </h2>
+    <h1> Ambient Temperature: <span id="current-temperature"><span></h1>
+      <select name="" id="current-city">
+        <option value="london">London</option>
+        <option value="edinburgh">Edinburgh</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="newyork">New York</option>
+      </select>
+  </section>
+  <section>
+    <h2> Thermostat Temperature: <span id="temperature"></span> </h2>
     <h2>Energy usage: medium-usage</h2>
     <h3>Power saving mode is <span id="power-saving-status">on</span></h3>
 
-    <button id="increase-temperature">Up</button>
-    <button id="decrease-temperature">Down</button>
+    <button id="temp-up">Up</button>
+    <button id="temp-down">Down</button>
     <button id="reset">Reset</button>
     <button id="powersaving-on">Power Saving On</button>
     <button id="powersaving-off">Power Saving Off</button>
