@@ -60,13 +60,6 @@ $(document).ready(function(){
   $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#selected-city').val();
-    $.ajax({
-     statusCode: {
-      502: function () {
-        alert('Fail!');
-        }
-     }
-  })
     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
       $('#select-temperature').text(data.main.temp);
     })

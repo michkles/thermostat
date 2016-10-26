@@ -9,3 +9,7 @@
 .high-usage {
   color: red;
 }
+
+body {
+  background-image: linear-gradient(to left, black 40%, white 40%)
+}
