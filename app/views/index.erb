@@ -7,23 +7,25 @@
   <link rel='stylesheet' href='css/bootstrap.css'>
 
 </head>
+
 <body>
 
   <h1> Thermostat </h1>
   <section>
-    <h1> Ambient Temperature: <span id="current-temperature"><span></h1>
-      <select name="" id="current-city">
-        <option value="london">London</option>
-        <option value="edinburgh">Edinburgh</option>
-        <option value="lincoln">Lincoln</option>
-        <option value="tokyo">Tokyo</option>
-        <option value="newyork">New York</option>
-      </select>
-  </section>
-  <section>
-    <h1> Specified City Temperature: <span id="select-temperature"></span></h1>
-    <form id="select-city">
-      <input id="selected-city" type="text" placeholder="Enter a city"></input>
+    <form id="select-city" action="/" method="post">
+      <h1> Ambient Temperature: <span id="current-temperature"><span></h1>
+        <select name="city" id="current-city">
+          <option value="london">London</option>
+          <option value="edinburgh">Edinburgh</option>
+          <option value="lincoln">Lincoln</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="newyork">New York</option>
+        </select>
+    </section>
+    <section>
+      <h1> Specified City Temperature: <span id="select-temperature"></span></h1>
+
+      <input id="selected-city" name='city' type="text" placeholder="Enter a city"></input>
       <input type="submit"></input>
     </form>
   </section>

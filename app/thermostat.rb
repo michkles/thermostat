@@ -1,3 +1,5 @@
+require 'sinatra'
+
 class Thermostat < Sinatra::Base
 
   get '/' do
@@ -5,9 +7,11 @@ class Thermostat < Sinatra::Base
   end
 
   post '/' do
-    Setting.create(temperature: params[:temperature],
-    city: params[:city],
-    PSM: params[:PSM])
+    puts params.inspect
+    setting = Setting.new(city: params[:city])
+    setting.save
   end
+
+  run! if app_file == $0
 
 end

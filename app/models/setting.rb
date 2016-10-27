@@ -1,10 +1,10 @@
-class Settings
+class Setting
 
   include DataMapper::Resource
 
   property(:id, Serial)
-  property(:temperature, Integer)
-  property(:PSM, Boolean, :default => false)
+  # property(:temperature, String)
+  # property(:PSM, String)
   property(:city, String)
 
 end
