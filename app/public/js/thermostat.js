@@ -58,7 +58,7 @@ Thermostat.prototype.displayUsage = function() {
   }
 };
 
-
+module.exports = Thermostat;
 
 
 
