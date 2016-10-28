@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'sinatra/base'
 require 'data_mapper'
 require_relative 'models/settings'
@@ -27,3 +28,15 @@ class Thermostat < Sinatra::Base
   run! if app_file == $0
 
 end
+=======
+ENV['RACK_ENV'] ||= 'development'
+
+require 'sinatra/base'
+require 'sinatra/flash'
+require 'sinatra/partial'
+
+require_relative 'data_mapper_setup'
+
+require_relative 'server'
+require_relative 'thermostat'
+>>>>>>> 0466774e2d231d01ffd50b28c8eae8c62d45cc67
