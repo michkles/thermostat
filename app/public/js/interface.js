@@ -6,17 +6,10 @@ $(document).ready(function(){
     $('#temperature').text(thermostat.temperature());
     $('#temperature').attr('class', thermostat.displayUsage());
     $('#energy-usage').text(thermostat.displayUsage());
+    displayWeather("London")
   }
 
-//---INITIALISATION --- //
-  $('#temperature').text(thermostat.temperature());
-
-  $('#temperature').attr('class', thermostat.displayUsage());
-
-  $('#energy-usage').text(thermostat.displayUsage());
-
-  displayWeather("London")
-//---END---//
+  updateTemperature();
 
   $('#temp-up').on('click', function(){
     thermostat.up();

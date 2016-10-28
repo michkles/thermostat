@@ -22,7 +22,7 @@ Thermostat.prototype.isMaximumTemperature = function(){
 
 Thermostat.prototype.up = function(){
   if (this._temperature === this.isMaximumTemperature()) {
-    throw new Error('Maximum temperature reached');
+    throw new Error('Maximum _temperature reached');
   }
   this._temperature += 1;
 };
